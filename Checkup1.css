@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b6cadd; /* Light blue-gray background */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark gray text for readability */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+h1 {
+    text-align: center;
+    color: #003366; /* Dark blue */
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out; /* Slide-in animation for heading */
+}
+
+form {
+    background: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: popIn 0.5s ease-out; /* Pop-in animation for form */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #003366; /* Dark blue */
+    transition: color 0.3s ease; /* Smooth transition for label color */
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color and shadow */
+}
+
+input:focus {
+    border-color: #0056b3; /* Darker blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 91, 255, 0.5); /* Blue shadow on focus */
+    outline: none;
+}
+
+button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for button color and scale */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+button:active {
+    background-color: #003d7a; /* Even darker blue on click */
+    transform: scale(0.98); /* Slightly shrink button on click */
+}
+
+#chart-container {
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-out; /* Fade-in animation for chart container */
+}
+
+.result, .disease-info {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    background-color: #e6f0ff; /* Light blue background */
+    animation: slideUp 1s ease-out; /* Slide-up animation for results */
+}
+
+.disease-info {
+    background-color: #cce5ff; /* Light blue background for disease info */
+    color: #004085; /* Darker blue text for disease info */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Locator</title>
+    <link rel="stylesheet" href="locator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Nearby Diagnostic Labs</h1>
+        <label for="location-input">Enter Your Location:</label>
+        <input type="text" id="location-input" placeholder="Enter your location...">
+        
+        <label for="location-select">Or Choose a Location in Pune:</label>
+        <select id="location-select">
+            <option value="">Select Location</option>
+            <option value="Koregaon Park">Koregaon Park</option>
+            <option value="Aundh">Aundh</option>
+            <option value="Shivaji Nagar">Shivaji Nagar</option>
+            <option value="Viman Nagar">Viman Nagar</option>
+            <option value="Wakad">Wakad</option>
+            <option value="Kothrud">Kothrud</option>
+            <option value="Kalyani Nagar">Kalyani Nagar</option>
+            <option value="Hadapsar">Hadapsar</option>
+            <option value="Kharadi">Kharadi</option>
+            <option value="Baner">Baner</option>
+            <option value="Pashan">Pashan</option>
+            <option value="Hinjewadi">Hinjewadi</option>
+        </select>
+
+        <button onclick="findLab()">Find Labs</button>
+
+        <div id="lab-list"></div>
+    <!-- </div> -->
+    <center>
+        <p>  <a class="navlink1" id="Home" onclick="window.location.href='index.html';">Home</a></p>
+    </center>
+</div>
+
+    <script src="locator.js"></script>
+</body>
+</html>

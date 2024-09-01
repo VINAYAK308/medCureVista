@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Test Disease Detection</title>
+    <link rel="stylesheet" href="Checkup.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Test Disease Detection</h1>
+        <form id="test-form">
+            <h2>Enter Blood Test Results</h2>
+            <!-- Input fields as before -->
+            <label for="neutrophils">Neutrophils (%):</label>
+            <input type="number" id="neutrophils" step="0.1" required>
+
+            <label for="lymphocytes">Lymphocytes (%):</label>
+            <input type="number" id="lymphocytes" step="0.1" required>
+
+            <label for="eosinophils">Eosinophils (%):</label>
+            <input type="number" id="eosinophils" step="0.1" required>
+
+            <label for="monocytes">Monocytes (%):</label>
+            <input type="number" id="monocytes" step="0.1" required>
+
+            <label for="basophils">Basophils (%):</label>
+            <input type="number" id="basophils" step="0.1" required>
+
+            <label for="rbc">RBC (10^6/uL):</label>
+            <input type="number" id="rbc" step="0.01" required>
+
+            <label for="pcv">PCV (%):</label>
+            <input type="number" id="pcv" step="0.1" required>
+
+            <label for="mcv">MCV (fl):</label>
+            <input type="number" id="mcv" step="0.1" required>
+
+            <label for="mch">MCH (pg):</label>
+            <input type="number" id="mch" step="0.1" required>
+
+            <label for="mchc">MCHC (g/dl):</label>
+            <input type="number" id="mchc" step="0.1" required>
+
+            <label for="platelet-count">Platelet Count (/cumm):</label>
+            <input type="number" id="platelet-count" required>
+
+            <button type="submit">Detect Disease</button>
+        </form>
+        <div id="chart-container">
+            <canvas id="test-chart"></canvas>
+        </div>
+        <div id="result" class="result"></div>
+        <div id="disease-info" class="disease-info"></div>
+    </div>
+    <script src="Checkup.js"></script>
+</body>
+</html>

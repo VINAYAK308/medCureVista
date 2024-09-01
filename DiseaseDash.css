@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c8dedd;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+.quiz{
+    display: flex;
+
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 5px solid transparent;
+    animation: slideIn 1s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.quiz-container:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.quiz-container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #555;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.navlink {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+.navlink:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.cpp-container {
+    border-left: 5px solid rgb(224, 224, 144);
+}
+
+.cpp-quiz {
+    background-color: rgb(210, 210, 130);
+}
+
+.cpp-quiz:hover {
+    background-color: rgb(205, 205, 125);
+}
+
+.python-container {
+    border-left: 5px solid #88cddf;
+}
+
+.python-quiz {
+    background-color: #80cadd;
+}
+
+.python-quiz:hover {
+    background-color:#7dcee2;
+}
+
+.java-container {
+    border-left: 5px solid #9398cf;
+}
+
+.java-quiz {
+    background-color: #9197d3;
+}
+
+.java-quiz:hover {
+    background-color: #9398ca;
+}
+.C-container {
+    border-left: 5px solid #ee9f9f;
+}
+
+.C-quiz {
+    background-color: #e09d79;
+}
+
+.C-quiz:hover {
+    background-color: #e0a18e;
+}
+.S-container {
+    border-left: 5px solid #86b088cb;
+}
+
+.S-quiz {
+    background-color: #72bd74b2;
+}
+
+.S-quiz:hover {
+    background-color: #8be585b4;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.navlink1 {
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+   
+}
+.Option{
+    display:flex;
+}

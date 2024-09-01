@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        
+        body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d1e6e9; 
+
+}
+
+.chatbot {
+    width: 33.8vw;
+    position: absolute;
+    top: 39px;
+    z-index: 13;
+    left: 33%;
+    height: 147px;
+    border-radius: 14px;
+}
+
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: 70vh;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(197, 229, 242, 0.476);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    margin-left: -7px;
+}
+
+
+
+#chat-header {
+    background-color: #99e6e5;
+    color: #014c63e8;
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #a7ddde; 
+    border-radius: 5px; 
+    margin: 0; 
+    display: flex;
+    
+}
+
+#chat-header:hover {
+    background-color: #88d1d8; 
+    color: #ffffff; 
+    border-color: #6db3c3; 
+}
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #ccefff;
+      
+}
+
+.input-container {
+    display: flex;
+    /* padding: 0;  */
+    border-top: 1px solid #ddd;
+    background-color: #a0f1f9; 
+    position: relative;
+    /* margin: 100px;  */
+    gap:3px;
+    /* width: 100%; */
+    /* margin-top: 330px; */
+    position: bottom;
+    padding: 10px
+    
+   
+}
+
+#user-input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #82d0db;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 0;
+   
+}
+
+#send-button {
+    padding: 12px 20px;
+    margin-left: 5px;
+    background-color: #84c0e7;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 0; 
+}
+#send-button:hover {
+    background-color: #a5d3e6; 
+}
+
+#send-button:active {
+    transform: scale(0.98);
+}
+
+.user-message, .bot-message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.user-message {
+    background-color: #b3ffb3;
+    color: #333333;
+}
+
+.bot-message {
+    background-color: #ccffcc; 
+    color: #333333;
+    align-self: flex-start;
+}
+
+.hii {
+    /* width: 109px; */
+    /* top: -122px; */
+    background-color: transparent;
+    left: 10px;
+    position: relative;
+    height: 90px;
+}
+.heading{
+    margin-left: 180px;
+}
+.navlink1 {
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+   
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-header">
+            <h1 class="heading">Chikitsak</h1>  
+            <img class="hii" src="Chat42.png" alt=""> 
+        </div>
+        
+      
+         <div id="chat-box" class="chat-box">  </div>  
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Ask me anything about Health Care...">
+            <button id="send-button">Send</button>
+        </div>
+        
+    <center>
+        <p>  <a class="navlink1" id="Home" onclick="window.location.href='index.html';">Home</a></p>
+    </center>
+</div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+
+        // Placeholder for API key - Should be handled securely
+        const API_KEY = "AIzaSyAQ-iRnVeP0TQDsW5SqCyWPxFe7LDRCnhk"; // Replace this with your actual API key
+        const genAI = new GoogleGenerativeAI(API_KEY);
+
+        async function generateResponse(prompt) {
+            try {
+                
+                // const prompt = "Generate 5 phrases about human Right"
+                const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+                const result = await model.generateContent(prompt);
+                const response = await result.response;
+                const text = await response.text();
+                document.getElementById("chat-box").innerText = text;
+                console.log(text)
+            } catch (error) {
+                console.error("Error generating content:", error);
+                document.getElementById("chat-box").innerText = "Sorry, something went wrong. Please try again.";
+            }
+        }
+
+        document.getElementById("send-button").addEventListener("click", () => {
+           
+            const userInput = document.getElementById("user-input").value;
+            console.log(userInput)
+            generateResponse(userInput) 
+            //   if (userInput.trim() !== "") {
+            //      generateResponse(userInput);
+            //      document.getElementById("user-input").value = ""; // Clear the input field
+            //  }
+        });
+    </script>
+</body>
+</html>

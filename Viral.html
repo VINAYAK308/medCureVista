@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Fever Management Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(197, 229, 242, 0.476);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0073e6;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        h2 {
+            color: #fff;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            animation: slideRight 1s ease-in-out;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        .section {
+            background-color: #d4e6f1; /* Light blue background for the section */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #f6ddcc; /* Light orange background for odd sections */
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px rgba(0, 115, 230, 0.3);
+            background-color: #b3cde0; /* Slightly darker shade on hover */
+        }
+
+        .section-title {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .important-note {
+            font-style: italic;
+            color: #d9534f;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .navlink1 {
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+   
+}
+.dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style the dropdown button */
+        .dropdown button {
+            background-color: #3498db;
+            color:White;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Style the links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Viral Fever Management Guide</h1>
+
+    <div class="section">
+        <h2 style="background-color: #0073e6; padding: 10px; border-radius: 5px;">Medication</h2>
+        <p>Common medications for managing viral fever primarily focus on relieving symptoms, as antibiotics are ineffective against viruses. Here are some commonly used medications:</p>
+        <ul>
+            <li><strong>Acetaminophen (Tylenol):</strong> Reduces fever and alleviates pain.</li>
+            <li><strong>Ibuprofen (Advil, Motrin):</strong> Anti-inflammatory that can help lower fever and relieve pain.</li>
+            <li><strong>Aspirin:</strong> Used for pain and fever reduction, but generally not recommended for children or teenagers due to the risk of Reye's syndrome.</li>
+            <li><strong>Decongestants:</strong> Help relieve nasal congestion associated with viral infections (e.g., pseudoephedrine).</li>
+            <li><strong>Antihistamines:</strong> Can help alleviate symptoms like runny nose and sneezing (e.g., diphenhydramine).</li>
+        </ul>
+        <p class="important-note">It's important to consult a healthcare professional before taking any medication, especially for children or if there are underlying health conditions.</p>
+    </div>
+    <div class="dropdown">
+        <button>Buy Medicine Online</button>
+        <div class="dropdown-content">
+            <a href="https://www.1mg.com" target="_blank">1mg</a>
+            <a href="https://www.pharmeasy.in" target="_blank">PharmEasy</a>
+            <a href="https://www.netmeds.com" target="_blank">Netmeds</a>
+            <a href="https://www.apollopharmacy.in" target="_blank">Apollo Pharmacy</a>
+            <a href="https://www.medlife.com" target="_blank">Medlife</a>
+        </div>
+    </div>
+    <center>
+        <p>  <a class="navlink1" id="Home" onclick="window.location.href='index.html';">Home</a></p>
+    </center>
+    
+
+</body>
+</html>
